@@ -1,10 +1,8 @@
 # Mini projet - Windows Listening Ports Audit
 
-Suite à l'achat d'un nouveau PC j'ai refais un auto diagnostique de mes ports.
+Following the purchase of a new PC, I performed an auto-diagnostic of my ports.
 
-J'ai fait ce mini projet qui reprend la procédure que j'ai utilisé pour faire l'audit de mes ports, et identifier
-quoi sécuriser.
-Les ports sont fictifs.
+I did this mini project that follows the procedure I used to audit my ports and identify what to secure. The ports are fictitious.
 
 EN
 
@@ -104,11 +102,11 @@ enfin, applique les recommandations conseillées par l'ANSSI
 
 # Compétences / Skills
 
-Administration de Windows
-PowerShell
-Sécurité de l’infrastructure
-Audit de sécurité
-Git/GitHub
+Administration de Windows  
+PowerShell  
+Sécurité de l’infrastructure  
+Audit de sécurité  
+Git/GitHub  
 
 EN
 Windows Administration
