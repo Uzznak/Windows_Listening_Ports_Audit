@@ -3,9 +3,7 @@
 J'ai fait ce mini projet qui reprend la procédure que j'ai utilisé pour faire l'audit de mes ports, et identifier quoi sécuriser. Les ports sont fictifs.
 
 Following the purchase of a new PC, I performed an auto-diagnostic of my ports.
-Following the purchase of a new PC, I performed an auto-diagnostic of my ports.
 I did this mini project that follows the procedure I used to audit my ports and identify what to secure. The ports are fictitious.
-
 
 
 ## Environment
@@ -16,7 +14,7 @@ I did this mini project that follows the procedure I used to audit my ports and 
 
 ## objectif
 Le script génère un fichier CSV contenant les ports d’écoute TCP.  
-EN  
+
 The script generates a CSV file containing listening TCP ports.  
 
 # instructions
@@ -46,29 +44,21 @@ Export-Csv ".\results\ports.csv" -NoTypeInformation
 
 .\scripts\audit_ports.ps1  
 Si l'exécution est bloquée :  
-Set-ExecutionPolicy -Scope Process Bypass
+Set-ExecutionPolicy -Scope Process Bypass  
 
 Le fichier sera généré a l'emplacement choisi  **results\ports.csv**
 
 
 ## 4. Vérifier les résultats
 
-Afficher le contenu : **Import-Csv .\results\ports.csv** ou **cat .\results\ports.csv**
+Afficher le contenu : **Import-Csv .\results\ports.csv** ou **cat .\results\ports.csv**  
 
 ## 5. Identifier les services associés aux ports
 Lister les ports :
 
-Get-NetTCPConnection -State Listen |
-Sort-Object LocalPort |
-Format-Table LocalAddress,LocalPort
-
-Exemple :
-
-135  -> RPC
-445  -> SMB
-3389 -> RDP
-80   -> HTTP
-443  -> HTTPS
+Get-NetTCPConnection -State Listen |  
+Sort-Object LocalPort |  
+Format-Table LocalAddress,LocalPort  
 
 enfin, applique les recommandations conseillées par l'ANSSI 
 
