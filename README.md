@@ -1,5 +1,5 @@
 # Mini projet - Windows Listening Ports Audit
-:eu:
+
 J'ai fait ce mini projet qui reprend la procédure que j'ai utilisé pour faire l'audit de mes ports, et identifier quoi sécuriser. Les ports sont fictifs.
 
 Following the purchase of a new PC, I performed an auto-diagnostic of my ports.
@@ -22,18 +22,10 @@ The script generates a CSV file containing listening TCP ports.
 # instructions
 ## 1. Créer le projet
 
-Ouvre PowerShell :
-
+Ouvre PowerShell   
 mkdir windows-listening-ports-audit  
-
 cd windows-listening-ports-audit  
-
-
-mkdir scripts  
-
-mkdir results  
-
-mkdir docs
+mkdir scripts  results  doc   
 
 New-Item README.md
 New-Item scripts\audit_ports.ps1
@@ -41,26 +33,22 @@ New-Item docs\recommendations.md
 
 ## 2. Créer le script d'audit
 
-- ouvrir **notepad scripts\audit_ports.ps1**, écrire :
+- ouvrir **notepad scripts\audit_ports.ps1**, écrire :  
 
-Get-NetTCPConnection -State Listen |
-Select-Object LocalAddress, LocalPort |
-Sort-Object LocalPort |
-Export-Csv ".\results\ports.csv" -NoTypeInformation
+Get-NetTCPConnection -State Listen |  
+Select-Object LocalAddress, LocalPort |  
+Sort-Object LocalPort |  
+Export-Csv ".\results\ports.csv" -NoTypeInformation  
 
 - Enregistrer
 
 ## 3. Exécuter le script
 
-.\scripts\audit_ports.ps1
-
-Si l'exécution est bloquée :
-
+.\scripts\audit_ports.ps1  
+Si l'exécution est bloquée :  
 Set-ExecutionPolicy -Scope Process Bypass
 
-
-Le fichier sera généré a l'emplacement  **results\ports.csv**
-
+Le fichier sera généré a l'emplacement choisi  **results\ports.csv**
 
 
 ## 4. Vérifier les résultats
