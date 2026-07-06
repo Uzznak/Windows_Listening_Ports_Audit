@@ -6,6 +6,10 @@ J'ai fait ce mini projet qui reprend la procédure que j'ai utilisé pour faire 
 Following the purchase of a new PC, I performed an auto-diagnostic of my ports.
 I did this mini project that follows the procedure I used to audit my ports and identify what to secure. The ports are fictitious.
 
+## objectif
+
+Faire un script qui génère un fichier CSV contenant les ports d’écoute TCP.  
+Make a script that generates a CSV file containing listening TCP ports.  
 
 ## Environment
 
@@ -13,13 +17,7 @@ I did this mini project that follows the procedure I used to audit my ports and 
 - PowerShell
 - Git
 
-## objectif
-
-Faire un script qui génère un fichier CSV contenant les ports d’écoute TCP.  
-
-Make a script that generates a CSV file containing listening TCP ports.  
-
-# instructions
+# Instructions
 ## 1. Créer le projet
 
 Ouvre PowerShell   
@@ -33,7 +31,7 @@ New-Item docs\recommendations.md
 
 ## 2. Créer le script d'audit
 
-- ouvrir **notepad scripts\audit_ports.ps1**, écrire :  
+- Ouvrir **notepad scripts\audit_ports.ps1**, écrire :  
 
 Get-NetTCPConnection -State Listen |  
 Select-Object LocalAddress, LocalPort |  
@@ -50,10 +48,7 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 Le fichier sera généré a l'emplacement choisi  **results\ports.csv**
 
-
-## 4. Vérifier les résultats
-
-Afficher le contenu : **Import-Csv .\results\ports.csv** ou **cat .\results\ports.csv**  
+Vérifier les résultats : Afficher le contenu : **Import-Csv .\results\ports.csv** ou **cat .\results\ports.csv**  
 
 ## 5. Identifier les services associés aux ports
 Lister les ports :
