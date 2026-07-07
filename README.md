@@ -1,4 +1,4 @@
-# Auditer-des-ports-windows / Windows Listening Ports Audit
+# Auditer-des-ports-windows / Windows Listening Ports Audit (4 juillet 2026)
 
 Suite à l'achat d'un nouveau PC j'ai refais un auto diagnostique de mes ports.  
 J'ai fait ce mini projet qui reprend la procédure que j'ai utilisé pour faire l'audit de mes ports, et identifier quoi sécuriser. Les ports sont fictifs.
@@ -6,7 +6,7 @@ J'ai fait ce mini projet qui reprend la procédure que j'ai utilisé pour faire 
 Following the purchase of a new PC, I performed an auto-diagnostic of my ports.
 I did this mini project that follows the procedure I used to audit my ports and identify what to secure. The ports are fictitious.
 
-## objectif
+## Objectif
 
 Faire un script qui génère un fichier CSV contenant les ports d’écoute TCP.  
 Make a script that generates a CSV file containing listening TCP ports.  
