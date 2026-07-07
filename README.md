@@ -71,7 +71,7 @@ Windows Administration
 PowerShell  
 Infrastructure Security  
 Security Auditing  
-Git/GitHub  
+Git/GitHub 
 
 # Sources
 
