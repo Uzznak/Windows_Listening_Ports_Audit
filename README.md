@@ -30,11 +30,10 @@ New-Item docs\recommendations.md
 
 ## 2. Script d’audit / Audit script  
 
-**FR**:
-Créer le fichier :  
+Créer le fichier / create the file  
 notepad scripts\audit_ports.ps1  
 
-Y insérer / insert :
+Y insérer / copy paste  :
 
 Get-NetTCPConnection -State Listen |  
 Select-Object LocalAddress, LocalPort |  
@@ -47,8 +46,7 @@ Export-Csv ".\results\ports.csv" -NoTypeInformation
 
 Si l’exécution est bloquée :  
 *Set-ExecutionPolicy -Scope Process Bypass  
-
-Afficher le contenu :  
+  
 Import-Csv .\results\ports.csv  ou  cat .\results\ports.csv  
 
 # 4. Analyse des ports / Port analysis  
